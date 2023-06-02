@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="660.0" prefWidth="1099.0" style="-fx-background-color: #4e006c;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yaam.javaprojectv2.controller.FilmViewController">
+   <children>
+      <GridPane layoutX="17.0" layoutY="372.0" prefHeight="291.0" prefWidth="1067.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="270.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="FilmTable" prefHeight="270.0" prefWidth="1086.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="40.0" text="id" />
+                  <TableColumn fx:id="titreCol" prefWidth="216.0" text="Titre" />
+                  <TableColumn fx:id="realisateurCol" prefWidth="148.0" text="Realisateur" />
+                  <TableColumn fx:id="anneeSortieCol" prefWidth="138.0" text="Annee de Sortie" />
+                  <TableColumn fx:id="dureeCol" prefWidth="75.0" text="Duree" />
+                  <TableColumn fx:id="genreCol" minWidth="0.0" prefWidth="83.0" text="Genre" />
+                  <TableColumn fx:id="synopsisCol" minWidth="0.0" prefWidth="252.0" text="Synopsis" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
+      <BorderPane layoutY="-3.0" prefHeight="337.0" prefWidth="1099.0" style="-fx-background-color: fff;">
+         <top>
+            <Pane prefHeight="82.0" prefWidth="1099.0" style="-fx-background-color: #4e006c;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="382.0" layoutY="14.0" text="Gestion des film" textFill="WHITE">
+                     <font>
+                        <Font size="47.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </top>
+         <left>
+            <GridPane prefHeight="199.0" prefWidth="759.0" style="-fx-border-color: #030308;" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="0.0" prefWidth="0.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="35.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="149.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.0" minWidth="10.0" prefWidth="246.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="0.0" prefWidth="26.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="63.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="303.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="23.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="31.0" minHeight="5.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="12.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                   <Label fx:id="idLabel" text="id" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                  <Label text="Titre" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Realisateur" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label text="Annee Sortie" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label text="Duree" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Label text="Genre" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Label text="Synopsis" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                   <TextField fx:id="idTextField" prefHeight="25.0" prefWidth="87.0" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                  <TextField fx:id="titre" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="realisateur" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <TextField fx:id="duree" prefHeight="25.0" prefWidth="176.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <TextArea fx:id="synopsis" prefHeight="63.0" prefWidth="285.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <DatePicker fx:id="anneeSortie" prefHeight="25.0" prefWidth="231.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <ComboBox fx:id="genre" prefHeight="25.0" prefWidth="302.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </left>
+         <bottom>
+            <Pane prefHeight="16.0" prefWidth="1099.0" style="-fx-background-color: #4e006c;" BorderPane.alignment="CENTER" />
+         </bottom>
+         <right>
+            <Pane prefHeight="205.0" prefWidth="321.0" style="-fx-border-color: #030308;" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutX="15.0" layoutY="6.0" prefHeight="131.0" prefWidth="281.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="Add" mnemonicParsing="false" prefHeight="25.0" prefWidth="286.0" style="-fx-background-radius: 12;" text="Ajouter Un film" />
+                        <Button fx:id="actualiser" mnemonicParsing="false" prefHeight="25.0" prefWidth="286.0" style="-fx-background-radius: 12;" text="Actualiser Mon tableau" GridPane.rowIndex="1" />
+                        <Button fx:id="clear" mnemonicParsing="false" prefHeight="25.0" prefWidth="286.0" style="-fx-background-radius: 12;" text="Annuler" GridPane.rowIndex="2" />
+                        <Button fx:id="wordFile" layoutX="10.0" layoutY="89.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="286.0" style="-fx-background-radius: 12;" text="Génrer un Fichier Word" GridPane.rowIndex="3" />
+                        <Button fx:id="modifier" mnemonicParsing="false" prefHeight="25.0" prefWidth="286.0" style="-fx-background-radius: 12;" text="Modifier Le film" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="8.0" layoutY="150.0" prefHeight="73.0" prefWidth="309.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="72.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="94.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="16.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="94.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="importerExcel" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-radius: 12;" text="importer" GridPane.columnIndex="1" />
+                        <Button fx:id="exporterExcel" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-radius: 12;" text="exporter" GridPane.columnIndex="3" />
+                        <Label text="Excel" />
+                        <Label text="Json" GridPane.rowIndex="1" />
+                        <Button fx:id="importerJson" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-radius: 12;" text="importer" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="exporterJson" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-radius: 12;" text="exporter" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label text="text" GridPane.rowIndex="2" />
+                        <Button fx:id="importerTxt" layoutX="91.0" layoutY="34.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-radius: 12;" text="importer" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="exporterTxt" layoutX="217.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" style="-fx-background-radius: 12;" text="exporter" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+         </right>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4e006c;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <GridPane layoutX="12.0" layoutY="334.0" prefHeight="30.0" prefWidth="1067.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="126.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="974.0" minWidth="10.0" prefWidth="973.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="chercher" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="Chercher" />
+            <TextField fx:id="inputChercher" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.yaam.javaprojectv2.controller.ModificationController">
+   <children>
+      <TextField fx:id="titreTextField" layoutX="306.0" layoutY="54.0" />
+      <TextField fx:id="realisateurTextField" layoutX="306.0" layoutY="110.0" />
+      <TextField fx:id="dureeTextField" layoutX="306.0" layoutY="216.0" />
+      <Button fx:id="modifier" layoutX="495.0" layoutY="360.0" mnemonicParsing="false" text="Modifier" />
+      <Label layoutX="71.0" layoutY="58.0" text="Titre" />
+      <Label layoutX="71.0" layoutY="114.0" text="Realisateur" />
+      <Label layoutX="71.0" layoutY="163.0" text="Annee Sortie" />
+      <Label layoutX="71.0" layoutY="220.0" text="Duree" />
+      <Label layoutX="71.0" layoutY="276.0" text="Genre" />
+      <Label layoutX="71.0" layoutY="330.0" text="Synopsis" />
+      <DatePicker fx:id="anneSortieTextField" layoutX="306.0" layoutY="159.0" prefHeight="25.0" prefWidth="149.0" />
+      <ComboBox fx:id="genreTextField" layoutX="306.0" layoutY="272.0" prefWidth="150.0" />
+      <TextArea fx:id="synopsisTextField" layoutX="306.0" layoutY="317.0" prefHeight="60.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
